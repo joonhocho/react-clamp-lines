@@ -139,7 +139,7 @@ export default class ClampLines extends PureComponent {
     return (
       <div className={this.getClassName()}>
         <div ref={e => { this.element = e; }}>
-            {this.state.text}
+            {this.props.renderText ? this.props.renderText(this.state.text) : this.state.text}
         </div>
         {this.getButton()}
       </div>
